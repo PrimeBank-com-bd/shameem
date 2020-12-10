@@ -61,7 +61,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         resource-group: tailspin-k8s
-        cluster-name: springpetcllinic
+        cluster-name: springpetclinic
     
     - uses: azure/k8s-create-secret@v1
       name: Create imagepullsecret for ACR
