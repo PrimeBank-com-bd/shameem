@@ -1,0 +1,31 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: springpetclinic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springpetclinic
+  template:
+    metadata:
+      labels:
+        app: springpetclinic
+    spec:
+      containers:
+        - name: springpetclinic
+          image: ghcr.io/canarysplayground/springpetclinic:latest
+          ports:
+          - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: springpetclinic
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+    selector:
+        app: springpetclinic
