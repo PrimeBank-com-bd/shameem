@@ -26,9 +26,9 @@ jobs:
       - name: Login to ACR
         uses: docker/login-action@v1
         with:
-          registry: springdemoregistry.azurecr.io
-          username: ${{ secrets.AZURE_CLIENT_ID }}
-          password: ${{ secrets.AZURE_CLIENT_SECRET }}
+          registry: ghcr.io
+          username: ${{github.repository_owner}}
+          password: ${{ secrets.CR_PAT }}
           
       - name: Build and push
         uses: docker/build-push-action@v2
@@ -37,8 +37,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            canarysplayground/sringpetclinic:latest
-            canarysplayground/sringpetclinic:${{github.run_number}}
+            ghcr.io/canarysplayground/sringpetclinic:latest
+            ghcr.io/canarysplayground/sringpetclinic:${{github.run_number}}
       
           
       - name: Image digest
