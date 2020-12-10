@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springpetclinic
-          image: ghcr.io/canarysplayground/springpetclinic:latest
+          image: ghcr.io/canarysplayground/springpetclinic:${{github.run_number}}
           ports:
           - containerPort: 80
 ---
