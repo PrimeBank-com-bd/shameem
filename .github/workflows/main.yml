@@ -37,8 +37,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/canarysplayground/sringpetclinic:latest
-            ghcr.io/canarysplayground/sringpetclinic:${{github.run_number}}
+            ghcr.io/canarysplayground/springpetclinic:latest
+            ghcr.io/canarysplayground/springpetclinic:${{github.run_number}}
          
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
