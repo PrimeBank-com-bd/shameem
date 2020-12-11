@@ -14,8 +14,8 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-      - name: build project
-        run: mvn package
+      #- name: build project
+      #  run: mvn package
         
       - name: verify
         run: ls
@@ -41,7 +41,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags:
-            ghcr.io/PrimeBank-com-bd/shameem:latest
+            ghcr.io/primebank-com-bd/shameem:latest
             #ghcr.io/PrimeBank-com-bd/shameem:${{ github.run_number }} 
 
 
