@@ -41,8 +41,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: 
-            ghcr.io/primebank/grenstron:latest
-            ghcr.io/primebank/grenstron: ${{ github.run_number }} 
+            ghcr.io/PrimeBank-com-bd/grenstron:latest
+            ghcr.io/PrimeBank-com-bd/grenstron:${{ github.run_number }} 
 
 
       - name: Run a multi-line script
