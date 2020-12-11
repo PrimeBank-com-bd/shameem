@@ -15,7 +15,7 @@ jobs:
         run: echo Hello, world!
         
       - name: build project
-        run: mvn package -B
+        run: mvn package
         
       - name: verify
         run: ls
