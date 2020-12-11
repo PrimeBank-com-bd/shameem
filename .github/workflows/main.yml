@@ -40,9 +40,9 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: 
+          tags:
             ghcr.io/PrimeBank-com-bd/shameem:latest
-            ghcr.io/PrimeBank-com-bd/shameem:${{ github.run_number }} 
+            #ghcr.io/PrimeBank-com-bd/shameem:${{ github.run_number }} 
 
 
       - name: Run a multi-line script
